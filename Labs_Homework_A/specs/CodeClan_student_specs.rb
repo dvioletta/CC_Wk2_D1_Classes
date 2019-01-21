@@ -5,7 +5,7 @@ require_relative('../CodeClan_student')
 class TestCodeClanstudent < MiniTest::Test
 
   def setup
-    @student = CodeClan_student.new('Adam', 'E14')
+    @student = CodeClan_student.new('Adam', 'E14', 'Talk', 'Ruby')
   end
 
   def test_student_name
@@ -28,5 +28,15 @@ class TestCodeClanstudent < MiniTest::Test
     @student.set_student_cohort('G7')
     assert_equal('G7' , @student.get_student_cohort())
   end
+
+  def test_student_speech
+    assert_equal('Talk', @student.set_student_speech)
+  end
+
+  def test_student_favourite
+    assert_equal('Ruby', @student.set_student_favourite)
+  end
+
+
 
 end
