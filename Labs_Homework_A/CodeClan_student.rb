@@ -8,4 +8,9 @@ class CodeClan_student
   def get_student_name()
     return @Student_name
   end
+
+  def get_student_cohort()
+    return @cohort
+  end
+
 end
